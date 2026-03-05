@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoro Anime World</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #e8e8e8;
+}
+header {
+    background: #155724;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+nav {
+    background: #022c22;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav a:hover {
+    color: #81c784;
+}
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+.search-container input[type=text] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+.search-container button {
+    padding: 10px 15px;
+    background: #155724;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background: #117a1f;
+}
+
+/* Ads Block */
+.ads {
+    background: #1f1f1f;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border: 2px dashed red;
+    font-size: 18px;
+}
+
+/* Anime Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    background: #133e30;
+    margin: 15px;
+    width: 220px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+}
+.card h3 {
+    padding: 10px;
+}
+.card button {
+    background: #155724;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card button:hover {
+    background: #117a1f;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+
+<script>
+// Search Function
+function searchAnime() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('card');
+    for(let i=0; i<cards.length; i++){
+        let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+        cards[i].style.display = title.includes(input) ? 'inline-block' : 'none';
+    }
+}
+
+// Watch Button
+function watchAnime(title){
+    alert("Enjoy watching: " + title + " 🍃(Zoro style)"); 
+}
+</script>
+
+</head>
+
+<body>
+
+<header>🌿 Zoro Anime World</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Zoro Highlights</a>
+<a href="#">One Piece</a>
+<a href="#">Characters</a>
+</nav>
+
+<div class="search-container">
+<input type="text" id="searchInput" placeholder="Search Anime...">
+<button onclick="searchAnime()">Search</button>
+</div>
+
+<div class="ads">
+Advertisement Space
+</div>
+
+<div class="container">
+
+<div class="card">
+<img src="https://wallpapercave.com/wp/wp12132783.jpg" alt="Zoro Featured">
+<h3>Zoro Highlights</h3>
+<button onclick="watchAnime('Zoro Highlights')">Watch Now</button>
+</div>
+
+<div class="card">
+<img src="https://wallpapercave.com/wp/wp3754363.jpg" alt="One Piece">
+<h3>One Piece</h3>
+<button onclick="watchAnime('One Piece')">Watch Now</button>
+</div>
+
+<div class="card">
+<img src="https://wallpapercave.com/wp/wp10284369.jpg" alt="One Piece Battles">
+<h3>One Piece Battles</h3>
+<button onclick="watchAnime('One Piece Battles')">Watch Now</button>
+</div>
+
+<div class="card">
+<img src="https://wallpapercave.com/wp/wp10284215.jpg" alt="Anime Fights">
+<h3>Epic Fights</h3>
+<button onclick="watchAnime('Epic Fights')">Watch Now</button>
+</div>
+
+</div>
+
+</body>
+</html>
