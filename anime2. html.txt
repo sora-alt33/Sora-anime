@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoro Character - Anime World</title>
+<style>
+body{margin:0;font-family:Arial;background:#0b0b0b;color:white;}
+header{background:#155724;padding:20px;text-align:center;font-size:28px;}
+nav{background:#022c22;padding:10px;text-align:center;}
+nav a{color:white;margin:15px;text-decoration:none;font-size:18px;}
+nav a:hover{color:#81c784;}
+.ads{background:#1f1f1f;padding:20px;margin:20px;text-align:center;border:2px dashed red;}
+.video-container{text-align:center;margin:20px;}
+iframe{width:90%;height:500px;border:none;border-radius:10px;}
+</style>
+</head>
+<body>
+
+<header>Zoro - Anime World</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="zoro.html">Zoro</a>
+<a href="luffy.html">Luffy</a>
+<a href="sanji.html">Sanji</a>
+</nav>
+
+<div class="ads">Advertisement Space</div>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/3xNY2fG6DRI" allowfullscreen></iframe>
+</div>
+
+</body>
+</html>
